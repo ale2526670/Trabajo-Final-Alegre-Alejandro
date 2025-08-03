@@ -8,5 +8,3 @@ createRoot(document.getElementById('root')).render(
     <App/>
   </BrowserRouter>
 )
-
-//no me andaba el react router
