@@ -15,7 +15,6 @@ const NewMessageForm = ({addNewMessage}) => {
                 <i className="bi bi-plus-lg"></i>
                 <i className="bi bi-emoji-grin"></i>
                 <input type="text" placeholder='Escribe un mensaje...' id='message' name='message' required />
-                <i className="bi bi-mic"></i>
             </div>
             <button type='submit' className="button-primary"><i class="bi bi-arrow-right-circle"></i></button>
         </form>

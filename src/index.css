@@ -10,22 +10,23 @@
 }
 /* app */
 .app{
-    height: 630px;
+    height: 100vh;
     width: 100%;
     background-color: white;
 }
 .app-container{
     display: flex;
     flex-direction: row;
-    height: 630px;  
+    height: 100vh;  
 }
 /* chat screen */
-.chat-screen{
+.chat-screen {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 630px;
-    background-image: url('/images/fondo.jpeg');
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('/images/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -123,7 +124,7 @@
 .contact-icons-container{
     display: flex;
     flex-direction: column;
-    height: 630px;
+    height: 100vh;
     width: 70px;
     justify-content: space-between;
     align-items: center;
@@ -198,42 +199,60 @@
 .message {
     display: flex;
     flex-direction: row;
-    position: relative;
-    align-items: flex-end;
-    gap: 5px;
-    padding: 10px;
-    border-radius: 10px;
     margin: 5px 10px;
-}
-.message--right {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    justify-content: flex-end;
-    background-color: #d9fdd3;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
 }
 .message--left {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    justify-content: flex-start;
-    background-color: white;
+    align-self: flex-start;
+    flex-direction: row;
 }
-.message-text {
+.message--right {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+.message__bubble {
+    background-color: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    position: relative;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+.message--right .message__bubble {
+    background-color: #d9fdd3;
+    border-top-right-radius: 0;
+}
+.message--left .message__bubble {
+    border-top-left-radius: 0;
+}
+.message__text {
     margin: 0;
 }
-.message-hour {
-    font-size: 12px;
+.message__meta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 11px;
     color: #666;
-    margin-top: 5px;
-    text-align: right;
+    gap: 5px;
+    margin-top: 4px;
 }
-.button-danger-2{
+.button-danger-2 {
+    background: transparent;
     border: none;
-    height: 20px;
-    width: 20px;
-    background-color: red;
-    border-radius: 50px;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px;     
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    align-self: flex-end;
+}
+.button-danger-2:hover {
+    background-color: rgba(255, 0, 0, 0.1);
 }
 /* message list */
 .no-messages {
@@ -282,18 +301,6 @@
     .contact-icons-container{
         display: none;
     }
-    .contact-title-container{
-        width: 100%;
-    }
-    .contact-search-container{
-        width: 100%;
-    }
-    .contact-list{
-        width: 100%;
-    }
-    .contact-map{
-        width: 100%;
-    }
         .contact-title{
         font-size: 20px;
     }
@@ -302,35 +309,55 @@
     }
 }
 
-@media screen and (max-width: 623px){
-    .contact-map{
-        width: 100%;
+@media screen and (max-width: 768px){
+    .contact-icons-container{
+        display: none;
     }
-    .contact-title-container{
-        width: 100%;
+}
+@media screen and (max-width: 530px){
+    .contact-title-icons{
+        display: none;
     }
     .contact-search-container{
-        width: 100%;
+        display: none;
     }
-    .contact-list{
-        width: 100%;
+    .chat-screen-camera{
+        display: none;
     }
-    .new-message-form{
-        width: 100%;
+    .bi-search{
+        display: none;
     }
-    .chat-screen__messages{
-        width: 100%;
+    .bi-emoji-grin{
+        display: none;
+    }
+    .contact-last-connection{
+        display: none;
     }
     .contact-title{
         font-size: 20px;
     }
-    .contact-search{
+    .new-message input[type="text"]{
+        font-size: 12px;
+        width: 100px;
+    }
+    .button-primary{
+        width: 20px;
+        height: 20px;
+    }
+    .contact-avatar{
+        width: 30px;
+        height: 30px;
+    }
+    .contact-name{
+        font-size: 14px;
+    }
+    .chat-screen__title{
         font-size: 15px;
     }
-
-}
-@media screen and (max-width: 323px){
-    .new-message input[type="text"]{
-        width: 100px;
+    .message__text{
+        font-size: 12px;
+    }
+    .message__meta{
+        font-size: 10px;
     }
 }

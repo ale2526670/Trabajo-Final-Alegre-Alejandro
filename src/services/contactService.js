@@ -21,19 +21,19 @@ const contacts = [
         name: 'messi',
         description: 'el mejor jugador de todos los tiempos',
         avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSW9IXiear7_oUZmBWVh4AcNTka3XLcAdeJg&s",
-        lastConnection: '20:00',
+        lastConnection: '16:00',
         connectionStatus: 'online',
         messages: [
             {
                 emisor: 'YO',
-                hora: '18:10',
+                hora: '16:10',
                 id: 1,
                 texto: 'contestame por favor yo te amo mucho leo',
                 status: 'visto'
             },
             {
                 emisor: 'YO',
-                hora: '18:11',
+                hora: '16:11',
                 id: 2,
                 texto: 'me costo mucho conseguir tu numero',
                 status: 'visto'
@@ -45,7 +45,7 @@ const contacts = [
         name: 'enzo',
         description: 'el medicampista que jugo poco en river ',
         avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHk6VpXLiT63VJGkIhR56O4y6Sp0SO7rRdmA&s',
-        lastConnection: '15:23',
+        lastConnection: '12:40',
         connectionStatus: 'offline',
         messages: [
             {
@@ -57,7 +57,7 @@ const contacts = [
             },
             {
                 emisor: 'enzo',
-                hora: '15:20',
+                hora: '12:30',
                 id: 2,
                 texto: 'de donde sacate mi numero?',
                 status: 'visto'
